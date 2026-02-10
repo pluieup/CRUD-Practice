@@ -45,9 +45,9 @@ export default function TableList({handleOpen, tableData, searchTerm, setTableDa
                 
 
                 {/* Instead of using client.id for the number, use the index from the map */}
-                {tableData.map((client, index) => (
+                {filteredData.map((client, index) => (
                     <tr key={client.id}>
-                        {/* We add 1 because arrays start at 0 */}
+                        {/* Show sequential index, not the database ID */}
                         <th>{index + 1}</th> 
                         <td>{client.name}</td>                        
                         <td>{client.job}</td>
